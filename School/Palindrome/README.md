@@ -7,19 +7,19 @@
 </pre>
 
 <p><br>
-<span style="font-size:18px"><strong>Example 2:</strong></span></p>
+<span style="font-size:20px"><strong>Example 2:</strong></span></p>
 
-<pre><span style="font-size:18px"><strong>Input: </strong>n = 123
+<pre><span style="font-size:20px"><strong>Input: </strong>n = 123
 <strong>Output: </strong>No</span>
 </pre>
 
 <p>&nbsp;</p>
 
-<p><span style="font-size:18px"><strong>Your Task:</strong><br>
+<p><span style="font-size:20px"><strong>Your Task:</strong><br>
 You don't need to read or print anything. Your task is to complete the function&nbsp;<strong>is_palindrome()&nbsp;</strong>which takes the number as input parameter and returns "Yes" if it is palindrome otherwise returns "No"(Without quotes).</span><br>
 &nbsp;</p>
 
-<p><span style="font-size:18px"><strong>Expected Time Complexity:</strong>&nbsp;O(x)<br>
+<p><span style="font-size:20px"><strong>Expected Time Complexity:</strong>&nbsp;O(x)<br>
 <strong>Expected Space Complexity:&nbsp;</strong>O(x)&nbsp;where x is number of digits in n.</span><br>
 &nbsp;</p>
 
