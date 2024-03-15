@@ -17,29 +17,31 @@ class Solution{
     {
         
         // your code here
-        int el,cnt=0,i;
-        for(i=0;i<size;i++){
-            if(cnt==0){
+        int el=-1,cnt=0;
+        for(int i=0;i<size;i++){
+            if(cnt!=0 && el==a[i] ){
                 cnt++;
+            }else  if(cnt==0){
                 el=a[i];
-            }else if(a[i]==el){
-                cnt++;
+                cnt=1;
             }else{
                 cnt--;
             }
+            
+
         }
+        
         cnt=0;
-        for(i=0;i<size;i++){
+        for(int i=0;i<size;i++){
             if(a[i]==el){
                 cnt++;
             }
         }
-        if(cnt>(size/2)){
+        if(cnt>size/2){
             return el;
         }else{
             return -1;
         }
-        
     }
 };
 
