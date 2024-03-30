@@ -10,29 +10,35 @@ using namespace std;
 class Solution{
   public:
     /*You are required to complete this method */
+    int helper(string s,int i,int num){
+        if(i==s.size()){
+            return num;
+        }
+        
+        if(s[i]>='0' && s[i]<='9'){
+            num=num*10+(s[i]-'0');
+            return helper(s,i+1,num);
+        }else{
+            return -1;
+        }
+    }
     int atoi(string s) {
         //Your code here
-        int neg=0,i=0;
+        int i=0;
         if(s[0]=='-'){
-            neg=1;
-            i++;
-        }
-        int res=0;
-        
-        while(i<s.length()){
-            if(s[i]-'0'<=9 && s[i]-'0'>=0){
-                res=res*10+(s[i]-'0');
-            }else{
-                return -1;
-            }
-            i++;
+            i=1;
         }
         
-        if(neg==1){
-            return -res;
+        int ans=helper(s,i,0);
+        if(ans==-1){
+            return ans;
+        }
+        if(s[0]=='-'){
+            return -ans;
         }else{
-            return res;
+            return ans;
         }
+        
     }
 };
 
