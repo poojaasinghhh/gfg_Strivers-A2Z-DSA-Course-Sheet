@@ -5,20 +5,21 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    long long reversedBits(long long X) {
+    long long reversedBits(long long x) {
         // code here
-        int arr[32]={0};
-        long long ans=0;
-        for(int i=0;i<32;i++){
-            arr[i]=X%2;
-            ans=ans+arr[i]*pow(2,31-i);
-            X=X/2;
-            if(X==0){
-                break;
+          long long rev=0;
+        for(int i=0;i<32;i++)
+        {
+            rev<<=1;
+            if((x&1))
+            {
+                rev^=1;
             }
+            x>>=1;
         }
-        return ans;
+        return rev;
     }
+    
 };
 
 //{ Driver Code Starts.
