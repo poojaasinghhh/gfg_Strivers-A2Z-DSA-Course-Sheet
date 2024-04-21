@@ -16,8 +16,6 @@ public:
     {
         // code here 
         sort(array.begin(),array.end());
-        
-        
     }
 };
 
