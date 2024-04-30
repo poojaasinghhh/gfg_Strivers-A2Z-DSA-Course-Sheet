@@ -32,8 +32,8 @@ class GfG{
             int n = sc.nextInt();
             int val = sc.nextInt();
             
-            Node first = new Node(val);
-            Node tail = first;
+            Node num1 = new Node(val);
+            Node tail = num1;
             for(int i=0; i<n-1; i++)
             {
                 val = sc.nextInt();
@@ -44,8 +44,8 @@ class GfG{
             int m = sc.nextInt();
             val = sc.nextInt();
             
-            Node second = new Node(val);
-            tail = second;
+            Node num2 = new Node(val);
+            tail = num2;
             for(int i=0; i<m-1; i++)
             {
                 val = sc.nextInt();
@@ -54,7 +54,7 @@ class GfG{
             }
             
             Solution g = new Solution();
-            Node res = g.addTwoLists(first, second);
+            Node res = g.addTwoLists(num1, num2);
             printList(res);
         }
     }
@@ -79,7 +79,7 @@ class Node {
 
 class Solution{
     //Function to add two numbers represented by linked list.
-    static Node reverse(Node head)
+     static Node reverse(Node head)
     {
         if (head == null || head.next == null)
             return head;
@@ -173,6 +173,10 @@ class Solution{
              temp2=temp2.next;
             
         }
+        
+         while (head.next!=null && head.data == 0){
+            head= head.next;
+         }
         
         return head;
         
